@@ -1,5 +1,10 @@
 # Angular6Basics
 
+The source of the code is based on Web Tutorial by JavaBrains
+https://www.youtube.com/playlist?list=PLqq-6Pq4lTTb7JGBTogaJ8bm7f8VCvFkj
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
 ## Development server
