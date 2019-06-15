@@ -1,0 +1,12 @@
+<div class="address-card">
+  <h1 class="name">{{user.name}}</h1>
+  <h3 class="title">{{user.title}}</h3>
+  <button (click)="toggleCollapse()">{{buttonTitle}}</button>
+  <div *ngIf="!isCollapsed">
+    <p class="address">{{user.address}}</p>
+    <div class="phones" *ngIf="user.phones.length>0">
+      <p>Phone:</p>
+      <p *ngFor="let phone of user.phones">{{phone}}</p>
+    </div>
+  </div>
+</div>
