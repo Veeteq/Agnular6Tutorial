@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelloWorldComponent implements OnInit {
 
+  routes = [
+    { linkName: 'Profile', url: 'profile' },
+    { linkName: 'Contact',  url: 'contact' }
+  ];
+
   constructor() { }
 
   ngOnInit() {

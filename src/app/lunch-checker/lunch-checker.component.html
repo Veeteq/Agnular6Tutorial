@@ -1,0 +1,14 @@
+<div class="container" ng-controller='LunchCheckController'>
+  <h1>Lunch Checker</h1>
+
+  <div class="form-group">
+    <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch"
+      class="form-control" [(ngModel)]="lunchMenu"><br>{{message}}
+  </div>
+  <div class="form-group">
+    <button class="btn btn-default" (click)='doCheck()'>Check If Too Much</button>
+  </div>
+  <div class="form-group message">
+    <!-- Your message can go here. -->
+  </div>
+</div>

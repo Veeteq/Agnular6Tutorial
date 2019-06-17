@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 import { User } from './address-card/user.model';
 import { Address } from './address-card/address.model';
+import { TestService } from './test.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +16,14 @@ export class AppComponent {
   user: User;
   inputText: string = "Initial value";
 
-  constructor() {
+  routes = [
+    { linkName: 'Hello', url: 'hello' },
+    { linkName: 'Date',  url: 'date' },
+    { linkName: 'Lunch', url: 'lunch' },
+    { linkName: 'View',  url: 'view' }   
+  ];
+
+  constructor(private svc: TestService) {
     this.address = new Address();
     this.address.city = "Wroclaw";
     this.address.number = "73";
@@ -27,5 +37,7 @@ export class AppComponent {
       '+48 605 067 132',
       '+48 607 48 48 43'
     ];
+
+    this.svc.printToConsole("Hello Witek");
   }
 }

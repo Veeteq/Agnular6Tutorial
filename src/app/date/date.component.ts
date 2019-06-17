@@ -14,7 +14,7 @@ export class DateComponent implements OnInit {
   constructor() {
     setInterval(() => {
       let currentDate = new Date();
-      this.dateMessage = formatDate(currentDate, 'yyyy-MM-dd hh:mm', 'en-US');
+      this.dateMessage = formatDate(currentDate, 'yyyy-MM-dd HH:mm', 'en-US');
     }, 1000);
   }
 

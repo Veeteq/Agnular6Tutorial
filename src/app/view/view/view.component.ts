@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { TestService } from 'src/app/test.service';
 
 @Component({
   selector: 'app-view',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewComponent implements OnInit {
 
-  constructor() { }
+  userName: string = "";
+  response: any;
+
+  constructor(private http: HttpClient) { 
+  }
 
   ngOnInit() {
   }
 
+  searchGit(){
+    this.http.get('https://api.github.com/users/' + this.userName)
+    .subscribe((response) => {
+      this.response = response;
+      console.log(this.response);
+    });      
+  }
 }

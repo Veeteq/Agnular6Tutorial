@@ -1,3 +1,7 @@
-<p>
-  view works!
-</p>
+User name: <input type="text" [(ngModel)]="userName">
+<button (click)="searchGit()">Search</button>
+<div *ngIf="response">
+  <p>User name: {{response.login}}</p>
+  <p>User id: {{response.id}}</p>
+  <p>Number of repos: {{response.public_repos}}</p>
+</div>
